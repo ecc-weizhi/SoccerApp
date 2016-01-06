@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">PlayPalAssignment</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <!-- tactical board UI -->
+    <string name="tactical_header">HEADER</string>
+    <string name="tactical_info">INFO</string>
+    <string name="tactical_players">PLAYERS</string>
+
+    <!-- player list UI -->
+    <string name="player_players">PLAYERS</string>
+
+    <!-- navigation drawer -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- app bar icon action string -->
+    <string name="action_friends">Friends</string>
+    <string name="action_mail">Mail</string>
+    <string name="action_books">Books</string>
+    <string name="title_activity_player_list">PlayerListActivity</string>
+    <string name="action_settings">Settings</string>
+</resources>

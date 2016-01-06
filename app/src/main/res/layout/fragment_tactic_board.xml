@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.TacticBoardFragment"
+    tools:showIn="@layout/activity_tactic_board">
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tactical_header"
+            android:layout_centerInParent="true"
+            android:id="@+id/textView2" />
+
+        <ImageButton
+            android:id="@+id/tactic_edit_button"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="8dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_mode_edit_black_24dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/header_layout"
+        android:background="@color/green_300">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/tactical_info"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tactic_fragment_players_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/green_800">
+        <Button
+            android:id="@+id/players_button"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:stateListAnimator="@null"
+            style="@style/PlayersButtonStyle"
+            android:text="@string/tactical_players"
+            android:onClick="launchPlayerActivity"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/info_layout"
+        android:layout_above="@id/tactic_fragment_players_layout"
+        android:src="@drawable/soccer_field"
+        android:scaleType="fitXY"/>
+
+
+
+</RelativeLayout>

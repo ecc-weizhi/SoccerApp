@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.TacticBoardActivity">
+    <item
+        android:id="@+id/action_friends"
+        android:orderInCategory="97"
+        android:title="@string/action_friends"
+        android:icon="@drawable/ic_group_white_24dp"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_mail"
+        android:orderInCategory="98"
+        android:title="@string/action_mail"
+        android:icon="@drawable/ic_mail_white_24dp"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_books"
+        android:orderInCategory="99"
+        android:title="@string/action_books"
+        android:icon="@drawable/ic_library_books_white_24dp"
+        app:showAsAction="always" />
+
+</menu>
