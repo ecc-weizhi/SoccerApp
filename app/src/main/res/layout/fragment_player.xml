@@ -1,5 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blue_200"
@@ -20,5 +21,16 @@
             android:layout_centerInParent="true"/>
 
     </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list"
+        android:name="com.example.weizhi.playpalassignment.PlayerFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/players_fragment_players_layout"
+        app:layoutManager="LinearLayoutManager"
+        tools:context="com.example.weizhi.playpalassignment.PlayerFragment"
+        tools:listitem="@layout/fragment_player_item" />
+
 
 </RelativeLayout>

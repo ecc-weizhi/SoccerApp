@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/field"
     tools:context=".activity.TacticBoardFragment"
     tools:showIn="@layout/activity_tactic_board">
 
@@ -13,12 +14,19 @@
         android:background="@color/white"
         android:orientation="horizontal">
 
-        <TextView
+        <EditText
+            android:id="@+id/header_edit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tactical_header"
             android:layout_centerInParent="true"
-            android:id="@+id/textView2" />
+            android:textAlignment="center"
+            android:hint="Formation Name"
+            android:text="@string/tactical_header"
+            android:clickable="false"
+            android:focusableInTouchMode="false"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
+            android:background="@android:color/transparent"/>
 
         <ImageButton
             android:id="@+id/tactic_edit_button"
@@ -27,6 +35,15 @@
             android:layout_margin="8dp"
             android:layout_alignParentRight="true"
             android:background="@drawable/ic_mode_edit_black_24dp"/>
+
+        <ImageButton
+            android:id="@+id/tactic_check_button"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="8dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_check_circle_black_24dp"
+            android:visibility="gone"/>
     </RelativeLayout>
 
     <RelativeLayout
@@ -43,6 +60,7 @@
             android:text="@string/tactical_info"/>
     </RelativeLayout>
 
+    <!-- nesting single button in layout to achieve flat button look with material button ripple -->
     <RelativeLayout
         android:id="@+id/tactic_fragment_players_layout"
         android:layout_width="match_parent"
@@ -59,14 +77,222 @@
             android:onClick="launchPlayerActivity"/>
     </RelativeLayout>
 
-    <ImageView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/info_layout"
+        android:layout_above="@id/tactic_fragment_players_layout">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/field_00"
+                android:scaleType="fitXY"/>
+
+            <ImageView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/field_01"
+                android:scaleType="fitXY"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/field_10"
+                android:scaleType="fitXY"/>
+
+            <ImageView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/field_11"
+                android:scaleType="fitXY"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/field_grid"
+        android:orientation="vertical"
+        android:layout_below="@id/info_layout"
         android:layout_above="@id/tactic_fragment_players_layout"
-        android:src="@drawable/soccer_field"
-        android:scaleType="fitXY"/>
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
 
+            <RelativeLayout android:id="@+id/field_00"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/field_01"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/field_02"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/field_03"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/field_04"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <RelativeLayout android:id="@+id/field_10"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/field_11"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/field_12"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/field_13"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/field_14"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <RelativeLayout android:id="@+id/field_20"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/field_21"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/field_22"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/field_23"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/field_24"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <RelativeLayout android:id="@+id/field_30"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/field_31"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/field_32"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/field_33"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/field_34"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>

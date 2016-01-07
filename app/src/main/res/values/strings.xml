@@ -20,4 +20,19 @@
     <string name="action_books">Books</string>
     <string name="title_activity_player_list">PlayerListActivity</string>
     <string name="action_settings">Settings</string>
+
+    <!-- bundle key -->
+    <string name="bundle_team_name">bundle_teamname</string>
+    <string name="bundle_players_id">bundle_playersid</string>
+    <string name="bundle_players_name">bundle_playersname</string>
+    <string name="bundle_jersey_number">bundle_jerseynumber</string>
+    <string name="bundle_field_position">bundle_fieldposition</string>
+    <string name="bundle_team">bundle_team</string>
+    <string name="bundle_player_selected_position">bundle_playerselectedposition</string>
+    <string name="bundle_is_editing">bundle_isediting</string>
+
+    <!-- clipdata label type -->
+    <string name="from_tactical">fromtactical</string>
+    <string name="from_player">fromplayer</string>
+
 </resources>

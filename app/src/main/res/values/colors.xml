@@ -40,9 +40,14 @@
     <color name="grey_800">#424242</color>
     <color name="grey_900">#212121</color>
 
-    <!-- black/white -->
+    <!-- black/white/transparent -->
     <color name="black">#000000</color>
     <color name="white">#ffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="selected">#80FF4081</color>
+
+    <!-- field color -->
+    <color name="field">#009d00</color>
 
 
 
