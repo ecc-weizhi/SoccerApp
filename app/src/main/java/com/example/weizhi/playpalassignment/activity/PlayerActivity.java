@@ -23,6 +23,7 @@ public class PlayerActivity extends AppCompatActivity implements PlayerFragment.
         setContentView(R.layout.activity_player);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         if(savedInstanceState == null){
             Bundle mBundle = getIntent().getBundleExtra(getString(R.string.bundle_team));
