@@ -1,4 +1,4 @@
-# SoccerApp
+# SoccerApp ![alt tag](https://travis-ci.org/ecc-weizhi/SoccerApp.svg?branch=master)
 
 A demo android app.
 
